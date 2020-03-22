@@ -35,7 +35,7 @@ def expired():
     for f in files:
         proba = process(reference,f)
         if DEBUG : print("Proba : (",proba,")")
-        if ( float(proba) > max_proba and float(proba) <= 1.0 ) :
+        if ( float(proba) > max_proba and float(proba) < 1.0 ) :
             max_proba = float(proba)
             max_file = f
     
